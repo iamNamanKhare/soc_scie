@@ -9,3 +9,8 @@ def apphome(request):
         'companies': companies.objects.all()
     }
     return render(request, 'index/home.html', content)
+
+# def populate(request):
+#     '''
+#         pass
+#     '''

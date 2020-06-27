@@ -1,6 +1,6 @@
 from django.db import models
-from django.db.models import CharField
-from django_mysql.models import ListTextField
+# from django.db.models import CharField
+# from django_mysql.models import ListTextField
 
 
 class companies(models.Model):
