@@ -15,4 +15,4 @@ class companies(models.Model):
 
 class skill(models.Model):
     companie=models.ForeignKey(companies, on_delete=models.CASCADE)
-    companies=models.CharField(max_length=50) 
+    skills=models.CharField(max_length=50) 
