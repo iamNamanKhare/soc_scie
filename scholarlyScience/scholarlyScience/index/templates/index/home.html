@@ -79,33 +79,17 @@
                                                     <p class="MuiTypography-root CardText MuiTypography-body1"><b>{{company.jobs}} openings</b></p>
                                                 </div>
                                             </div>
-                                              <div class="MuiGrid-root CompanyTags MuiGrid-container MuiGrid-align-items-xs-flex-start">
+                                            <div class="MuiGrid-root CompanyTags MuiGrid-container MuiGrid-align-items-xs-flex-start">
+                                            
+                                            {% for i in company.cskill.all %}
                                                   <div class="MuiGrid-root Tag MuiGrid-item">
                                                     <p class="MuiTypography-root TagText MuiTypography-body1">
-                                                            {{company.skill1}}
+                                                            {{i.skills}}
                                                     </p>
                                                   </div>
-                                                  <div class="MuiGrid-root Tag MuiGrid-item">
-                                                    <p class="MuiTypography-root TagText MuiTypography-body1">
-                                                            {{company.skill2}}
-                                                    </p>
-                                                  </div>
-                                                  <div class="MuiGrid-root Tag MuiGrid-item">
-                                                    <p class="MuiTypography-root TagText MuiTypography-body1">
-                                                            {{company.skill3}}
-                                                    </p>
-                                                  </div>
-                                                  <div class="MuiGrid-root Tag MuiGrid-item">
-                                                      <p class="MuiTypography-root TagText MuiTypography-body1">
-                                                          {{company.skill4}}
-                                                      </p>
-                                                  </div>
-                                                  <div class="MuiGrid-root Tag MuiGrid-item">
-                                                      <p class="MuiTypography-root TagText MuiTypography-body1">
-                                                          {{company.skill5}}
-                                                      </p>
-                                                  </div>
-                                              </div>
+                                           
+                                            {% endfor %}
+                                        </div>
                                         </div>
                                     </a>
                                 </div>

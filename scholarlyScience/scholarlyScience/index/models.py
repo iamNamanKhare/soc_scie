@@ -7,12 +7,8 @@ class companies(models.Model):
     location = models.CharField(max_length=100)
     scale = models.CharField(max_length=100)
     jobs = models.CharField(max_length=100)
-    skill1 = models.CharField(max_length=50)
-    skill2 = models.CharField(max_length=50)
-    skill3 = models.CharField(max_length=50)
-    skill4 = models.CharField(max_length=50)
-    skill5 = models.CharField(max_length=50)
+    
 
 class skill(models.Model):
-    companie=models.ForeignKey(companies, on_delete=models.CASCADE)
+    companie=models.ForeignKey(companies, related_name='cskill',  on_delete=models.CASCADE)
     skills=models.CharField(max_length=50) 
