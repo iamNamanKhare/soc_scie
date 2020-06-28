@@ -10,23 +10,54 @@
                 <aside>
                     <div class="Filters">
                         <div class="FilterCategory">
-                            <h5 class="MuiTypography-root FilterCategory-Heading MuiTypography-h5">Location</h5>
-                            <label class="MuiFormControlLabel-root">
+                            <!-- <h5 class="MuiTypography-root FilterCategory-Heading MuiTypography-h5">Location</h5> -->
+                            <!-- <label class="MuiFormControlLabel-root">
                                 <span class="MuiButtonBase-root MuiIconButton-root jss410 MuiCheckbox-root MuiCheckbox-colorSecondary FilterCheckbox jss411 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
                                     <span class="MuiIconButton-label"><input class="jss413" type="checkbox" data-indeterminate="false" value="1043"></span>
                                         <span class="MuiTouchRipple-root"></span>
                                 </span>
-                                <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">Remote-friendly</span>
-                            </label>
+                                <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">Remote_friendly</span>
+                                &nbsp;&nbsp;&nbsp;
+                            </label> -->
+                            <br><br><br>
+                            
+                            <div>
+                                <b class="text-dark">Location</b><br>
+                                <span class="bg-dark text-light ">Remote-friendly</span>
+                                {% for i in list_set %}
+                                        <span class=''><a href="?location={{i}}">{{i}}</a></span>
+                                        
+                                {% endfor %}
+    
+                            </div><br><br><br>
+
+                            <div>
+                                <b>SCALE</b><br>
+                                {% for i in list_scale %}
+                                        <span class=""><a href="?scale={{i}}">{{i}}</a></span>
+                                        
+                                {% endfor %}
+    
+                            </div><br><br><br>
+                            <div>
+                                <b>TECHNOLOGY</b><br>
+                                {% for i in list_tech %}
+                                        <span class=" "><a href="?tech={{i}}">{{i}}</a></span>  
+                                        
+                                {% endfor %}
+    
+                            </div>
+
                         </div>
+                        
                     </div>
                 </aside>
-
+            
             <!--company cards-->
             <div class="Content">
                 <div class="MuiGrid-root Companies MarginBottom MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-justify-xs-space-around">
 
-                   {% for company in companies %}
+                   {% for company in content %}
                       <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-6">
                         <div class="CompanyCard">
                             <div class="MuiPaper-root MuiCard-root TheCard MuiPaper-elevation1 MuiPaper-rounded">
@@ -84,6 +115,7 @@
                    {%endfor%}
                 </div>
             </div>
+        
         </div>
     </div>
     </div>
