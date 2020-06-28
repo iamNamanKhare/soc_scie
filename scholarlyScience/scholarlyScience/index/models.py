@@ -1,6 +1,4 @@
 from django.db import models
-# from django.db.models import CharField
-# from django_mysql.models import ListTextField
 
 
 class companies(models.Model):
@@ -15,9 +13,6 @@ class companies(models.Model):
     skill4 = models.CharField(max_length=50)
     skill5 = models.CharField(max_length=50)
 
-
-    def __str__(self):
-        return self.companyName
-
-    class Meta:
-        db_table = 'companies'
+class skill(models.Model):
+    companie=models.ForeignKey(companies, on_delete=models.CASCADE)
+    companies=models.CharField(max_length=50) 
