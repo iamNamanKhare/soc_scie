@@ -1,8 +1,8 @@
 # soc_scie
 
-check commits section to see the updates
+don't add to master unless approved,use your own branch ..alwayssss
 
-don't add to master unless approved,use the test branch ..alwayssss
+check commits section to see the updates
 
 please type in proper documentation of  the changes
 
