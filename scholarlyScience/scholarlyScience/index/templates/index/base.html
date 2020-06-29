@@ -91,8 +91,13 @@
                             <li class="luxbar-item"><a href="#">Companies</a></li>
                             <li class="luxbar-item"><a href="#">Projects</a></li>
                             <!--<li class="luxbar-item"><a href="#">Chats</a></li>-->
-                            <li class="luxbar-item"><a href="#">Profile</a></li>
-                            <li class="luxbar-item"><a href="#">Logout</a></li>
+                            {%if user.is_authenticated %}
+                                <li class="luxbar-item"><a href="#">Profile</a></li>
+                                <li class="luxbar-item"><a href="#">Logout</a></li>
+                            {%else %}
+                                <li class="luxbar-item"><a href="#">Login</a></li>
+                                <li class="luxbar-item"><a href="#">Register</a></li>
+                            {%endif%}
                         </ul>
                     </div>
             </header>
